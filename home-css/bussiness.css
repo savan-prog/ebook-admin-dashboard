@@ -1,0 +1,758 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* root  */
+:root {
+  --primary: #e1dcc9; /*Light gray*/
+  --secondary: #c5a992;
+  --accent: #dcad13;
+  --text-dark: #57595b; /*gray*/
+  --text-light: #deded1; /*light gray*/
+  --bg-light: #f3f2ec;
+  --white: #ffffff; /*White*/
+  --para: #74642f;
+}
+body {
+  background-color: var(--bg-light);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+/***** Header Section *****/
+.bussiness-logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+.navbar {
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* border-top:2px solid var(--text-light);
+    border-bottom:2px solid var(--text-light); */
+}
+.navbar > .container {
+  display: flex;
+  align-items: center;
+}
+.navbar-nav {
+  font-size: 17px;
+  font-weight: 500;
+  gap: 38px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.nav-link,
+.nav-link.active {
+  color: var(--text-dark);
+}
+.nav-link:hover,
+.nav-link.active:hover {
+  color: var(--accent);
+}
+.dropdown-menu {
+  background-color: var(--bg-light);
+  min-width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.dropdown-menu.show {
+  animation: fadeUp 1s ease;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dropdown-item {
+  color: var(--text-dark);
+  /* text-decoration: underline;
+  text-decoration-color:var(--para) ;
+  text-underline-offset:5px; */
+  padding: 8px 16px;
+}
+.dropdown-item span {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-item span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--para);
+  transition: width 0.6s ease-in-out;
+}
+.dropdown-item:hover span::after {
+  width: 100%;
+}
+.dropdown-item:hover {
+  color: var(--accent);
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: transparent;
+}
+#cartCount {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  color: var(--text-dark);
+  font-size: 10px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-icon {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 7px;
+}
+.cart-icon a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 18px;
+  position: relative;
+}
+.cart-icon a:hover {
+  color: var(--main-color);
+}
+.cart-icon #cartCount {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: var(--text-dark);
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Header Section CSS End */
+/*****Main Section *****/
+/* bussiness-books-section css */
+.bussiness-books-section {
+  margin: 80px 0;
+}
+.bussiness-books-section h1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  color: var(--para);
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+.bussiness-books-section p {
+  max-width: 900px;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  text-align: justify;
+  line-height: 2;
+}
+/* books-grid section css */
+.books-grid {
+  margin: 80px 0;
+  background-color: #edebe4;
+  padding: 50px 0 30px 0;
+}
+.popular-books h2 {
+  width: fit-content;
+  /* width: 100%; */
+  margin: 0 auto;
+  padding: 20px 5px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--para);
+  letter-spacing: 1px;
+  box-shadow:
+    rgba(138, 109, 29, 0.4) 5px 5px,
+    rgba(138, 109, 29, 0.3) 10px 10px,
+    rgba(138, 109, 29, 0.2) 15px 15px;
+  /* text-shadow: 2px 2px 10px rgba(138,109,29,0.3); */
+  animation: slideDown 1s ease-in-out;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.books-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.business-img {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 20px;
+  height: 500px;
+  box-shadow:
+    rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all 0.5s ease-in-out;
+}
+.business-img:hover {
+  transform: scale(1.04);
+}
+.book-card h5 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 35px;
+  color: var(--para);
+  line-height: 28px;
+  min-height: 40px;
+}
+.book-card p {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: var(--text-dark);
+}
+.book-card h6 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+/* why-read-bussiness-books section css */
+.why-read-bussiness-books {
+  margin: 80px 0;
+}
+.bussiness-books-hilights h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--para);
+}
+.bussiness-books-hilights {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+.bussiness-books-hilights ul {
+  list-style-type: none;
+  padding-left: 25px;
+  text-align: left;
+}
+.bussiness-books-hilights ul li {
+  padding-bottom: 18px;
+}
+.bussiness-books-hilights li i {
+  color: #8a6d1d;
+  margin-right: 10px;
+}
+/* Responsive CSS */
+/***** Header Responsive CSS *****/
+@media (max-width: 1200px) {
+  .about-logo {
+    font-size: 19px;
+  }
+  .navbar-nav {
+    gap: 35px;
+    font-size: 16px;
+  }
+  .cart-icon a {
+    font-size: 17px;
+  }
+}
+@media (max-width: 992px) {
+  .about-logo {
+    font-size: 18px;
+  }
+  .navbar {
+    padding: 12px 0;
+  }
+  .navbar-nav {
+    gap: 25px;
+    font-size: 15px;
+  }
+  .cart-icon {
+    margin-left: 4px;
+  }
+  .cart-icon a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 0;
+  }
+  .about-logo {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .navbar-nav {
+    gap: 15px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .navbar-nav .nav-link {
+    padding: 0;
+  }
+}
+@media (max-width: 576px) {
+  .navbar > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about-logo {
+    font-size: 17px;
+    white-space: nowrap;
+  }
+  .navbar-toggler {
+    padding: 4px 8px;
+    margin-left: auto;
+  }
+  .navbar-toggler-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .navbar-collapse {
+    margin-top: 15px;
+  }
+  .navbar-nav {
+    width: 100%;
+    gap: 18px;
+    align-items: flex-start !important;
+  }
+  .nav-item {
+    width: 100%;
+  }
+  .nav-item.dropdown,
+  .dropdown {
+    display: block !important;
+    width: 100%;
+  }
+  .nav-link {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 0;
+  }
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+  }
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 6px 0 0 0;
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+  .dropdown-menu li {
+    width: 100%;
+  }
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-align: left;
+  }
+  .dropdown-item span {
+    display: inline-block;
+  }
+  .cart-icon {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 8px;
+    margin-left: 0;
+  }
+  .cart-icon a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .about-logo {
+    font-size: 16px;
+  }
+  .navbar-toggler {
+    padding: 3px 7px;
+  }
+  .navbar-toggler-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+  .navbar-collapse {
+    margin-top: 12px;
+  }
+  .navbar-nav {
+    gap: 16px;
+  }
+  .nav-link {
+    font-size: 13px;
+    padding: 7px 0;
+  }
+  .nav-item.dropdown,
+  .dropdown {
+    display: block !important;
+    width: 100%;
+  }
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 5px 0 0 0;
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 7px 0;
+    font-size: 13px;
+  }
+  .cart-icon {
+    margin-top: 8px;
+  }
+  .cart-icon a {
+    font-size: 15px;
+  }
+  .cart-icon #cartCount {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+}
+/* End Header Responsive CSS */
+/* bussiness-books-section Responsive css */
+/* ========== 1200px ========== */
+@media (max-width: 1200px) {
+  .bussiness-books-section h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .bussiness-books-section p {
+    max-width: 850px;
+    font-size: 16px;
+  }
+}
+/* ========== 992px ========== */
+@media (max-width: 992px) {
+  .bussiness-books-section {
+    margin: 70px 0;
+  }
+  .bussiness-books-section h1 {
+    font-size: 36px;
+    margin-bottom: 35px;
+  }
+  .bussiness-books-section p {
+    max-width: 760px;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+/* ========== 768px ========== */
+@media (max-width: 768px) {
+  .bussiness-books-section {
+    margin: 60px 0;
+  }
+  .bussiness-books-section h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  .bussiness-books-section p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+  }
+}
+/* ========== 576px ========== */
+@media (max-width: 576px) {
+  .bussiness-books-section {
+    margin: 50px 0;
+  }
+  .bussiness-books-section h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+  }
+  .bussiness-books-section p {
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+  }
+}
+/* ========== 400px ========== */
+@media (max-width: 400px) {
+  .bussiness-books-section {
+    margin: 40px 5px;
+  }
+  .bussiness-books-section h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .bussiness-books-section p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+/* books-grid section responsive css */
+/* ================= 1200px ================= */
+@media (max-width: 1200px) {
+  .books-grid {
+    margin: 70px 0;
+  }
+  .popular-books h2 {
+    font-size: 36px;
+    padding: 18px 40px;
+  }
+  .business-img {
+    max-width: 320px;
+    height: 460px;
+  }
+  .book-card h5 {
+    min-height: 56px;
+  }
+}
+/* ================= 992px ================= */
+@media (max-width: 992px) {
+  .books-grid {
+    margin: 60px 0;
+    padding: 45px 0 25px;
+  }
+  .popular-books h2 {
+    font-size: 32px;
+    padding: 16px 35px;
+  }
+  .business-img {
+    max-width: 280px;
+    height: 410px;
+  }
+  .book-card h5 {
+    font-size: 17px;
+    min-height: 56px;
+  }
+  .book-card p {
+    font-size: 14px;
+  }
+}
+/* ================= 768px ================= */
+@media (max-width: 768px) {
+  .books-grid {
+    margin: 50px 0;
+    padding: 40px 0 20px;
+  }
+  .popular-books h2 {
+    font-size: 28px;
+    padding: 15px 25px;
+    margin-bottom: 45px !important;
+  }
+  .books-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .business-img {
+    max-width: 320px;
+    width: 100%;
+    height: 460px;
+  }
+  .book-card h5 {
+    min-height: auto;
+  }
+}
+/* ================= 576px ================= */
+@media (max-width: 576px) {
+  .books-grid {
+    margin: 40px 0;
+    padding: 35px 0 15px;
+  }
+  .popular-books h2 {
+    font-size: 24px;
+    padding: 14px 18px;
+    margin-bottom: 35px !important;
+  }
+  .business-img {
+    max-width: 280px;
+    height: 400px;
+  }
+  .book-card h5 {
+    font-size: 17px;
+  }
+  .book-card p {
+    font-size: 14px;
+  }
+  .book-card h6 {
+    font-size: 13px;
+  }
+}
+/* ================= 400px ================= */
+@media (max-width: 400px) {
+  .popular-books h2 {
+    font-size: 21px;
+    padding: 12px 15px;
+    letter-spacing: 0.5px;
+  }
+  .business-img {
+    max-width: 240px;
+    height: 340px;
+  }
+  .book-card h5 {
+    font-size: 16px;
+  }
+  .book-card p {
+    font-size: 13px;
+  }
+  .book-card h6 {
+    font-size: 12px;
+  }
+}
+/* Why-choose-section CSS */
+/* ===========================
+   1200px
+=========================== */
+@media (max-width: 1200px) {
+  .why-read-bussiness-books {
+    margin: 70px 0;
+  }
+  .bussiness-books-hilights {
+    max-width: 600px;
+  }
+  .bussiness-books-hilights h2 {
+    font-size: 36px;
+  }
+  .bussiness-books-hilights ul {
+    padding-left: 20px;
+  }
+  .bussiness-books-hilights ul li {
+    font-size: 16px;
+    padding-bottom: 16px;
+  }
+}
+/* ===========================
+   992px
+=========================== */
+@media (max-width: 992px) {
+  .why-read-bussiness-books {
+    margin: 60px 0;
+  }
+  .bussiness-books-hilights {
+    max-width: 550px;
+  }
+  .bussiness-books-hilights h2 {
+    font-size: 34px;
+    margin-bottom: 35px !important;
+  }
+  .bussiness-books-hilights ul li {
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+}
+/* ===========================
+   768px
+=========================== */
+@media (max-width: 768px) {
+  .why-read-bussiness-books {
+    margin: 50px 0;
+  }
+  .bussiness-books-hilights {
+    max-width: 100%;
+  }
+  .bussiness-books-hilights h2 {
+    font-size: 30px;
+    margin-bottom: 30px !important;
+  }
+  .bussiness-books-hilights ul {
+    width: fit-content;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: left;
+  }
+  .bussiness-books-hilights ul li {
+    font-size: 15px;
+    line-height: 28px;
+    padding-bottom: 14px;
+  }
+}
+/* ===========================
+   576px
+=========================== */
+@media (max-width: 576px) {
+  .why-read-bussiness-books {
+    margin: 45px 0;
+  }
+  .bussiness-books-hilights h2 {
+    font-size: 26px;
+    margin-bottom: 25px !important;
+  }
+  .bussiness-books-hilights ul {
+    width: fit-content;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: left;
+  }
+  .bussiness-books-hilights ul li {
+    font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 12px;
+  }
+  .bussiness-books-hilights li i {
+    margin-right: 8px;
+  }
+}
+/* ===========================
+   400px
+=========================== */
+@media (max-width: 400px) {
+  .why-read-bussiness-books {
+    margin: 40px 0;
+  }
+  .bussiness-books-hilights h2 {
+    font-size: 23px;
+    letter-spacing: 0.5px;
+  }
+  .bussiness-books-hilights ul {
+    width: fit-content;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: left;
+  }
+  .bussiness-books-hilights ul li {
+    font-size: 13px;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+  .bussiness-books-hilights li i {
+    font-size: 14px;
+    margin-right: 6px;
+  }
+}
+/***** End Responsive CSS *****/

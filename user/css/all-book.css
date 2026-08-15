@@ -1,0 +1,175 @@
+.topbar-middle-content {
+  color: black;
+  padding: 15px;
+  background-color: #f4f6f9;
+}
+.topbar-middle-content h3 {
+  padding-left: 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.search-input {
+  text-align: center;
+}
+#searchBook {
+  width: 99%;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 7px;
+  margin: 20px auto;
+}
+#bookContainer {
+  padding: 20px;
+}
+.card {
+  padding: 10px;
+  border: 3px solid rgb(162, 160, 160);
+  border-radius: 12px;
+}
+.card img {
+  height: 280px;
+  /* object-fit: cover; */
+  border-radius: 8px;
+}
+.card-body h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.card-body p {
+  margin-bottom: 8px;
+  color: #555;
+}
+.card-body h6 {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #0d6efd;
+}
+/***** End Main Section CSS *****/
+/* responsive css  */
+@media (max-width: 1200px) {
+  .card-body .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* ========== 992px ========== */
+@media (max-width: 992px) {
+  .topbar-middle-content {
+    padding: 20px;
+  }
+  .topbar-middle-content h3 {
+    padding-left: 0;
+    font-size: 24px;
+  }
+  #bookContainer {
+    padding: 15px 0;
+  }
+  .card img {
+    height: 260px;
+  }
+}
+/* ========== 768px ========== */
+@media (max-width: 768px) {
+  .topbar-middle-content {
+    padding: 18px;
+  }
+  .topbar-middle-content h3 {
+    font-size: 24px;
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+  #searchBook {
+    width: 100%;
+    margin: 15px 0 20px;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+  #bookContainer {
+    padding: 0;
+  }
+  .card {
+    padding: 10px;
+  }
+  .card img {
+    height: 250px;
+  }
+  .card-body h5 {
+    font-size: 19px;
+  }
+  .card-body h6 {
+    font-size: 17px;
+  }
+}
+/* ========== 576px ========== */
+@media (max-width: 576px) {
+  .topbar-middle-content {
+    padding: 15px;
+  }
+  .topbar-middle-content h3 {
+    font-size: 22px;
+  }
+  #searchBook {
+    font-size: 14px;
+    padding: 10px;
+    margin: 12px 0 18px;
+  }
+  .card {
+    padding: 10px;
+  }
+  .card img {
+    height: 190px;
+  }
+  .card-body {
+    text-align: center;
+  }
+  .card-body h5 {
+    font-size: 18px;
+  }
+  .card-body p {
+    font-size: 15px;
+  }
+  .card-body h6 {
+    font-size: 17px;
+    margin: 12px 0;
+  }
+  .card-body .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .card-body .btn.me-2 {
+    margin-right: 0 !important;
+  }
+}
+/* ========== 400px ========== */
+@media (max-width: 400px) {
+  .topbar-middle-content {
+    padding: 12px;
+  }
+  .topbar-middle-content h3 {
+    font-size: 20px;
+  }
+  #searchBook {
+    font-size: 14px;
+    padding: 9px 10px;
+  }
+  .card {
+    padding: 8px;
+  }
+  .card img {
+    height: 220px;
+  }
+  .card-body h5 {
+    font-size: 17px;
+  }
+  .card-body p {
+    font-size: 14px;
+  }
+  .card-body h6 {
+    font-size: 16px;
+  }
+  .card-body .btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,237 @@
+/***** Footer Section *****/
+.footer-section {
+  padding: 50px 0;
+  background-color: #edebe4;
+}
+.footer-main {
+  display: flex;
+}
+.footer-left-content,
+.about-us,
+.discover,
+.Help {
+  flex: 1;
+}
+.footer-left-content h3 {
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--para);
+}
+.footer-left-content p {
+  text-align: justify;
+  line-height: 30px;
+  color: var(--text-dark);
+}
+.about-us {
+  padding-left: 50px;
+}
+.about-us h4,
+.discover h4,
+.Help h4 {
+  color: var(--para);
+}
+.about-us ul,
+.discover ul,
+.Help ul {
+  list-style-type: none;
+  padding: 0;
+}
+.about-us ul li a,
+.discover ul li a,
+.Help ul li a {
+  text-decoration: none;
+  line-height: 30px;
+  color: var(--text-dark);
+}
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+}
+.copyright p {
+  font-size: 14px;
+}
+.social-icon a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+.social-icon i {
+  padding-left: 10px;
+}
+/***** End Footer Section *****/
+/***** Footer Section Responsive CSS *****/
+/* Footer Section CSS */
+@media (max-width: 1200px) {
+  .footer-section {
+    padding: 45px 0;
+  }
+  .footer-left-content h3 {
+    font-size: 32px;
+  }
+  .footer-left-content p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  .about-us {
+    padding-left: 40px;
+  }
+  .about-us h4,
+  .discover h4,
+  .Help h4 {
+    font-size: 20px;
+  }
+  .about-us ul li a,
+  .discover ul li a,
+  .Help ul li a {
+    font-size: 15px;
+  }
+  .copyright p {
+    font-size: 14px;
+  }
+  .social-icon i {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  .footer-section {
+    padding: 40px 0;
+  }
+  .footer-main {
+    gap: 30px;
+  }
+  .footer-left-content h3 {
+    font-size: 28px;
+  }
+  .footer-left-content p {
+    font-size: 15px;
+    line-height: 27px;
+  }
+  .about-us {
+    padding-left: 0;
+  }
+  .about-us h4,
+  .discover h4,
+  .Help h4 {
+    font-size: 19px;
+  }
+  .about-us ul li a,
+  .discover ul li a,
+  .Help ul li a {
+    font-size: 15px;
+  }
+  .social-icon i {
+    font-size: 17px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 35px 0;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+  .footer-left-content {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  .footer-left-content p {
+    max-width: 550px;
+    margin: auto;
+    text-align: center;
+  }
+  .about-us,
+  .discover,
+  .Help {
+    flex: 0 0 calc(33.33% - 24px);
+    padding-left: 0;
+  }
+  .about-us h4,
+  .discover h4,
+  .Help h4 {
+    font-size: 18px;
+  }
+  .about-us ul li a,
+  .discover ul li a,
+  .Help ul li a {
+    font-size: 14px;
+  }
+  .copyright {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .footer-section {
+    padding: 30px 0;
+  }
+  .footer-main {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-left-content,
+  .about-us,
+  .discover,
+  .Help {
+    flex: 100%;
+  }
+  .footer-left-content h3 {
+    font-size: 28px;
+  }
+  .footer-left-content p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .about-us h4,
+  .discover h4,
+  .Help h4 {
+    font-size: 18px;
+  }
+  .about-us ul li a,
+  .discover ul li a,
+  .Help ul li a {
+    font-size: 14px;
+  }
+  .copyright {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .social-icon i {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 400px) {
+  .footer-section {
+    padding: 25px 0;
+  }
+  .footer-main {
+    gap: 25px;
+  }
+  .footer-left-content h3 {
+    font-size: 25px;
+  }
+  .footer-left-content p {
+    font-size: 13px;
+    line-height: 23px;
+  }
+  .about-us h4,
+  .discover h4,
+  .Help h4 {
+    font-size: 17px;
+  }
+  .about-us ul li a,
+  .discover ul li a,
+  .Help ul li a {
+    font-size: 13px;
+  }
+  .copyright p {
+    text-align: center;
+    font-size: 13px;
+  }
+  .social-icon i {
+    font-size: 17px;
+  }
+}
+/***** End Footer Section Responsive CSS *****/

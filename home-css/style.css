@@ -1,0 +1,302 @@
+/***** Main Section *****/
+/* Hero section css */
+.Hero-section {
+  margin: 80px 0;
+}
+.carousel-indicators button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  background-color: var(--text-dark) !important;
+}
+.carousel-indicators {
+  /*bootstrap indicators ki position absolute hoti hai to use bottom property de skte hai direct*/
+  bottom: -50px;
+}
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  /* overflow: hidden; */
+}
+.main-content-text {
+  width: 450px;
+}
+.main-content-text h1 {
+  font-size: 70px;
+  color: var(--para);
+  letter-spacing: 5px;
+  /* font-weight: bold; */
+}
+.main-content-heading {
+  letter-spacing: 2px;
+  font-size: 60px !important;
+  line-height: 75px;
+}
+.main-content-text p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding: 15px 0;
+  line-height: 30px;
+  color: var(--text-dark);
+}
+.main-content-btn a {
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-weight: 550;
+  letter-spacing: 1px;
+}
+.main-content-btn a .fa-solid {
+  color: var(--accent);
+  vertical-align: middle;
+  display: inline-block;
+  transform: scaleX(1.5);
+}
+.main-content-img img {
+  width: 330px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 35px;
+}
+.carousel-item {
+  min-height: 600px;
+}
+.carousel-control-prev {
+  left: 0;
+}
+.carousel-control-next {
+  right: 0;
+}
+/* brand logo section css */
+.brand-logo {
+  background-color: #edebe4;
+  margin: 80px 0;
+}
+.brand-img {
+  overflow: hidden;
+  text-align: center;
+}
+.brand-img img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.5s ease-in;
+}
+.brand-img img:hover {
+  transform: scale(1.08);
+}
+/* Featured book section Css*/
+.featured-book {
+  margin: 80px 0;
+}
+.card {
+  padding: 20px 20px 0 20px;
+  background-color: transparent;
+  border: none;
+  /* color: var(--para); */
+}
+.card-img-top {
+  width: 100%;
+  height: auto;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transition: all 0.8s ease-in-out;
+}
+.card-img-top:hover {
+  transform: scale(1.08);
+}
+.card-body h5 {
+  padding-top: 45px;
+  font-size: 18px;
+}
+.featured-book-heading {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 20px;
+  margin-bottom: 50px;
+  color: var(--para);
+}
+.featured-book-heading span {
+  flex: 1; /*text ke phle ki or baad ki bachi hui space ko cover karne ke liye use hota hai*/
+  height: 1px;
+  background: #ccc;
+  position: relative;
+  top: -2px;
+}
+.card-img-top {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+.card-body h5 {
+  color: var(--para);
+}
+.card-body p {
+  color: var(--text-dark);
+}
+/* Best Selling Book Section Css */
+.best-selling-book {
+  margin: 80px 0;
+  background-color: #edebe4;
+  padding: 40px 0;
+}
+.best-sellers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  margin: 0 auto;
+}
+.book-image img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+}
+.best-sellers-content h2 {
+  padding-bottom: 15px;
+  font-size: 50px;
+  font-weight: 450;
+}
+.book-title {
+  position: relative;
+  display: inline-block;
+  color: var(--para);
+}
+.book-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 17px;
+  width: 60px;
+  height: 3px;
+  background: var(--para);
+}
+.best-sellers-content {
+  max-width: 520px;
+}
+.best-sellers-content p {
+  width: 100%;
+  padding-bottom: 30px;
+  font-size: 16px;
+  color: var(--text-dark);
+  text-align: justify;
+  line-height: 30px;
+}
+.best-sellers-content h3 {
+  padding-bottom: 7px;
+  font-size: 32px;
+  color: var(--para);
+}
+.best-sellers-content a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.best-sellers-arrow {
+  display: inline-block;
+  animation: arrowMove 0.9s ease-in-out infinite;
+}
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.best-sellers-arrow .fa-solid {
+  color: rgb(13 110 253);
+  vertical-align: middle;
+  display: inline-block;
+  transform: scale(1.3);
+}
+/* Subscribe Section */
+.subscribe-section {
+  margin: 80px 0;
+}
+.subscribe-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.subscribe-title {
+  flex: 1;
+  /* text-align: center; */
+}
+.subscribe-title h3 {
+  font-size: 47px;
+  font-weight: 400;
+  margin-left: 135px;
+  line-height: 65px;
+  color: var(--text-dark);
+}
+.subscribe-heading {
+  position: relative;
+  display: inline-block; /*jitne text utni width leta hai  inline-block but hmne niche width text se bhi kam di hai kewal 2 letter "Ne" tak*/
+}
+.subscribe-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 50px;
+  height: 3px;
+  background: var(--para);
+}
+.subscribe-email {
+  flex: 1;
+  margin-left: 30px;
+}
+.subscribe-email form {
+  width: 100%;
+}
+.subscribe-email p {
+  max-width: 400px;
+  text-align: justify;
+  line-height: 30px;
+  padding-bottom: 40px;
+  color: var(--text-dark);
+}
+.email-label {
+  color: var(--para);
+  font-weight: bold;
+}
+.subscribe-email input {
+  border-radius: 7px;
+  border: 1px solid var(--text-dark);
+  width: 100%;
+  max-width: 300px;
+  padding: 7px 0;
+  padding-left: 10px;
+}
+::placeholder {
+  font-size: 12px;
+}
+.subscribe-email button {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 5px;
+  color: var(--para);
+}
+.send-btn .fa-solid {
+  color: var(--para) !important;
+}
+#subscribed-successfully {
+  display: none;
+  color: green;
+  font-weight: 600;
+}
+/***** End Main Section *****/
+/* Home Page Css End */

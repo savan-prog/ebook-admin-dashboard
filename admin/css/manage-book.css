@@ -1,0 +1,124 @@
+.topbar-middle-content {
+  color: black;
+  padding: 15px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.table-wrapper {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.topbar-middle-content table {
+  width: 100%;
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.table th {
+  padding: 30px !important;
+}
+/* Responsive CSS of Main Section topbar-middle-content */
+/* ===================== 992px ===================== */
+@media (max-width: 992px) {
+  .topbar-middle-content {
+    padding: 18px;
+  }
+  .table th,
+  .table td {
+    padding: 18px !important;
+    font-size: 15px;
+  }
+  td:last-child {
+    min-width: 90px;
+  }
+  td:last-child .btn {
+    display: block;
+    width: 100%;
+    margin: 4px 0 !important;
+  }
+}
+/* ===================== 768px ===================== */
+@media (max-width: 768px) {
+  .topbar-middle-content {
+    padding: 15px;
+  }
+  .topbar-middle-content h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .topbar-middle-content table {
+    min-width: 850px;
+  }
+  .table th,
+  .table td {
+    padding: 15px !important;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .table img {
+    width: 70px !important;
+  }
+  .table .btn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+/* ===================== 576px ===================== */
+@media (max-width: 576px) {
+  .topbar-middle-content {
+    padding: 12px;
+  }
+  .topbar-middle-content h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .topbar-middle-content table {
+    min-width: 850px;
+  }
+  .table th,
+  .table td {
+    padding: 12px !important;
+    font-size: 13px;
+  }
+  .table img {
+    width: 60px !important;
+  }
+  .table .btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+/* ===================== 400px ===================== */
+@media (max-width: 400px) {
+  .topbar-middle-content {
+    padding: 10px;
+  }
+  .topbar-middle-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .topbar-middle-content table {
+    min-width: 850px;
+  }
+  .table th,
+  .table td {
+    padding: 10px !important;
+    font-size: 12px;
+  }
+  .table img {
+    width: 50px !important;
+  }
+  .table .btn {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}

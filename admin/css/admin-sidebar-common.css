@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #000;
+}
+body {
+  background-color: var(--bg-color);
+  color: white;
+}
+#menuBtn {
+  display: none;
+}
+#sidebar {
+  width: 250px;
+  min-height: 100vh;
+  border-right: 1px solid grey;
+  transition: 0.3s;
+}
+#sidebar.collapsed {
+  width: 80px;
+}
+#sidebar.collapsed .dashboard-text {
+  display: none;
+}
+#sidebar.collapsed #sidebarArrow {
+  margin: 0;
+}
+#sidebar.collapsed #title {
+  justify-content: center;
+  gap: 0;
+}
+#sidebar.collapsed span {
+  display: none;
+}
+#sidebar.collapsed a,
+#sidebar.collapsed .sidebar-toggle-btn {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  padding: 28px 5px;
+}
+#sidebar.collapsed .left-menu {
+  justify-content: center;
+  gap: 0;
+}
+#sidebar.collapsed #bookArrow {
+  display: none;
+}
+#sidebar.collapsed #userArrow {
+  display: none;
+}
+#sidebar.collapsed #orderArrow {
+  display: none;
+}
+#sidebar ul {
+  list-style-type: none;
+  padding-top: 85px;
+}
+#sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 28px 60px;
+}
+#sidebar ul li a i {
+  font-size: 22px;
+}
+.sidebar-toggle-btn {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 59px;
+  cursor: pointer;
+}
+.sidebar-toggle-btn i {
+  font-size: 22px;
+}
+.sidebar-title a {
+  gap: 20px !important;
+}
+.active a {
+  background: #1c1c1c;
+  border-left: 4px solid #4e73df;
+}
+.left-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.left-menu i {
+  font-size: 22px;
+}
+.left-menu span {
+  font-size: 16px;
+  font-weight: 600;
+}
+#bookArrow,
+#orderArrow,
+#userArrow {
+  transition: all 0.3s ease;
+}
+.submenu {
+  display: none;
+  padding-left: 92px !important;
+  padding-top: 0 !important;
+  margin-top: -5px;
+}
+.submenu li a {
+  padding: 7px 10px !important;
+  color: #d6d6d6;
+  font-size: 14px !important;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.submenu li a:hover {
+  color: #dcad13 !important;
+}
+.submenu.show {
+  display: block;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+#sidebarOverlay {
+  display: none;
+}
+/* Header CSS End */
+/* Responsive CSS  */
+/* sidebar nav responsive css */
+/* @media 1200px no need to change */
+@media (max-width: 992px) {
+  #sidebar {
+    width: 220px;
+  }
+  #sidebar ul li a {
+    padding: 24px 40px;
+    gap: 25px;
+  }
+  .sidebar-toggle-btn {
+    padding: 15px 40px;
+  }
+  .submenu {
+    padding-left: 72px !important;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  #menuBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 17px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1200;
+  }
+  #menuBtn i {
+    font-size: 28px;
+  }
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #000;
+    z-index: 1100;
+    transition: left 0.35s ease;
+  }
+  #sidebar.show {
+    left: 0;
+  }
+  #sidebarOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    z-index: 1000;
+  }
+  #sidebarOverlay.show {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  #sidebar {
+    width: 220px;
+  }
+  #sidebar ul li a {
+    font-size: 15px;
+    padding: 18px 22px;
+    gap: 18px;
+  }
+  .sidebar-toggle-btn {
+    padding: 14px 22px;
+  }
+  .left-menu {
+    gap: 18px;
+  }
+  .left-menu span {
+    font-size: 15px;
+  }
+  .submenu {
+    padding-left: 50px !important;
+  }
+  .submenu li a {
+    font-size: 13px !important;
+  }
+}
+@media (max-width: 400px) {
+  #sidebar {
+    width: 200px;
+  }
+  #sidebar ul li a {
+    padding: 16px 18px;
+    gap: 15px;
+  }
+  .sidebar-toggle-btn {
+    padding: 14px 18px;
+  }
+  .left-menu {
+    gap: 15px;
+  }
+  .left-menu span {
+    font-size: 14px;
+  }
+  .submenu {
+    padding-left: 42px !important;
+  }
+}

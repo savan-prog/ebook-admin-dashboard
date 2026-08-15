@@ -1,0 +1,146 @@
+.form-data {
+  margin-top: 20px;
+  width: 100%;
+  /* height: 400px; */
+  background-color: #fff;
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-coloum {
+  width: 48%;
+  min-height: 410px;
+  background-color: #f4f6f9;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.form-group label {
+  margin-bottom: 5px;
+}
+.input-field {
+  width: 100%;
+  height: 35px;
+  outline: none;
+  border: 2px solid #a6a9ae;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.bookImg {
+  border: none;
+  border-radius: 0;
+  padding-left: 0;
+}
+.bookPdf {
+  border: none;
+  border-radius: 0;
+  padding-left: 0;
+}
+.book-description {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.submitBtn {
+  margin-left: 20px;
+  border-radius: 7px;
+  /* outline: none; */
+}
+/***** End Main Section CSs *****/
+/* responsive css of Main Section form-data */
+@media (max-width: 1200px) {
+  .form-coloum {
+    padding: 5px 10px 0 10px;
+  }
+}
+@media (max-width: 992px) {
+  .submitBtn {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .form-data {
+    padding: 15px;
+  }
+  .form-coloum {
+    width: 100%;
+    min-height: auto;
+    padding: 18px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    font-size: 15px;
+  }
+  .input-field {
+    height: 40px;
+    font-size: 14px;
+  }
+  .submitBtn {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+@media (max-width: 576px) {
+  .form-data {
+    padding: 12px;
+  }
+  .form-coloum {
+    width: 100%;
+    padding: 15px;
+  }
+  .form-group label {
+    font-size: 14px;
+  }
+  .input-field {
+    height: 38px;
+    font-size: 13px;
+  }
+  .submitBtn {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .submitBtn .btn {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+@media (max-width: 400px) {
+  .form-data {
+    padding: 10px;
+  }
+  .form-coloum {
+    padding: 12px;
+  }
+  .form-group {
+    margin-bottom: 12px;
+  }
+  .form-group label {
+    font-size: 13px;
+  }
+  .input-field {
+    height: 36px;
+    font-size: 12px;
+  }
+  .submitBtn {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+  .submitBtn .btn {
+    width: 100%;
+  }
+}

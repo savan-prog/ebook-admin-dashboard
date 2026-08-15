@@ -1,0 +1,381 @@
+/* body {
+  display: flex;
+} */
+/***** Main Section Css *****/
+main {
+  /* width: calc(100% - 250px); */
+  flex: 1;
+  height: auto;
+  background-color: #fff;
+}
+.main-topbar {
+  height: 110px;
+  border-bottom: 1px solid grey;
+  /* background-color: #f4f6f9; */
+}
+.main-topbar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+  padding: 15px;
+}
+.main-topbar-content h3 {
+  font-size: 25px;
+  padding-top: 15px;
+  padding-left: 15px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.main-topbar-content p {
+  padding-top: 0px;
+  padding-left: 15px;
+  color: black;
+  font-size: 16px;
+}
+.dashboard-home {
+  color: black;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 70px;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+.dashboard-card {
+  width: 320px;
+  height: 220px;
+  background-color: #111;
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid #333;
+}
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.dashboard-card i {
+  font-size: 45px;
+  color: #4e73df;
+  margin-bottom: 20px;
+}
+.dashboard-card h3 {
+  font-size: 34px;
+  padding-bottom: 10px;
+  /* margin-bottom:8px; */
+}
+.dashboard-card p {
+  color: #bdbdbd;
+  font-size: 16px;
+  margin: 0;
+}
+.dashboard-bottom {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 40px;
+  margin: 70px 30px;
+}
+.recent-box {
+  flex: 1;
+  background-color: #161616;
+  color: white;
+  border-radius: 12px;
+  padding: 25px;
+  min-height: 150px;
+}
+.recent-box h4 {
+  margin-bottom: 17px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.recent-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.recent-box ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.recent-box ul li:last-child {
+  border-bottom: none;
+}
+.recent-box strong {
+  /* display:block; */
+  font-size: 18px;
+  /* padding-bottom:25px; */
+}
+.recent-box small {
+  color: #bfbfbf;
+  font-size: 14px;
+}
+/***** End Main Section CSS *****/
+/* responsive css of main topbar */
+/* ===========================
+   992px
+=========================== */
+@media (max-width: 992px) {
+  .main-topbar {
+    height: 100px;
+  }
+  .main-topbar-content {
+    padding: 15px 20px;
+  }
+  .main-topbar-content h3 {
+    font-size: 24px;
+    padding: 10px 0 5px;
+  }
+  .main-topbar-content p {
+    padding: 0;
+    font-size: 15px;
+  }
+}
+/* ===========================
+   768px
+=========================== */
+@media (max-width: 768px) {
+  .main-topbar {
+    height: auto;
+  }
+  .main-topbar-content {
+    padding: 18px 20px;
+    gap: 6px;
+  }
+  .main-topbar-content h3 {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+  }
+  .main-topbar-content p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* ===========================
+   576px
+=========================== */
+@media (max-width: 576px) {
+  .main-topbar-content {
+    padding: 16px;
+  }
+  .main-topbar-content h3 {
+    font-size: 20px;
+  }
+  .main-topbar-content p {
+    font-size: 14px;
+  }
+}
+/* ===========================
+   400px
+=========================== */
+@media (max-width: 400px) {
+  .main-topbar-content {
+    padding: 14px;
+  }
+  .main-topbar-content h3 {
+    font-size: 18px;
+  }
+  .main-topbar-content p {
+    font-size: 13px;
+  }
+}
+/* responsive css of dashboard-home */
+/* ===========================
+   992px
+=========================== */
+@media (max-width: 992px) {
+  .dashboard-home {
+    gap: 50px;
+    margin-top: 60px;
+  }
+  .dashboard-card {
+    width: 280px;
+    height: 200px;
+    padding: 25px;
+  }
+  .dashboard-card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .dashboard-card h3 {
+    font-size: 30px;
+  }
+  .dashboard-card p {
+    font-size: 15px;
+  }
+}
+/* ===========================
+   768px
+=========================== */
+@media (max-width: 768px) {
+  .dashboard-home {
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  .dashboard-card {
+    width: 100%;
+    max-width: 320px;
+    height: 190px;
+    padding: 22px;
+  }
+  .dashboard-card i {
+    font-size: 38px;
+    margin-bottom: 14px;
+  }
+  .dashboard-card h3 {
+    font-size: 28px;
+  }
+  .dashboard-card p {
+    font-size: 15px;
+  }
+}
+/* ===========================
+   576px
+=========================== */
+@media (max-width: 576px) {
+  .dashboard-home {
+    margin-top: 30px;
+    gap: 22px;
+    padding: 0 20px;
+  }
+  .dashboard-card {
+    max-width: 100%;
+    height: 180px;
+    padding: 20px;
+  }
+  .dashboard-card i {
+    font-size: 35px;
+    margin-bottom: 12px;
+  }
+  .dashboard-card h3 {
+    font-size: 26px;
+    padding-bottom: 8px;
+  }
+  .dashboard-card p {
+    font-size: 14px;
+  }
+}
+/* ===========================
+   400px
+=========================== */
+@media (max-width: 400px) {
+  .dashboard-home {
+    margin-top: 25px;
+    gap: 18px;
+    padding: 0 15px;
+  }
+  .dashboard-card {
+    height: 170px;
+    padding: 18px;
+  }
+  .dashboard-card i {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .dashboard-card h3 {
+    font-size: 24px;
+    padding-bottom: 6px;
+  }
+  .dashboard-card p {
+    font-size: 13px;
+  }
+}
+/* responsive css of dashboard-bottom */
+/* ================= 992px ================= */
+@media (max-width: 992px) {
+  .dashboard-bottom {
+    gap: 25px;
+    margin: 50px 20px;
+  }
+  .recent-box {
+    padding: 22px;
+  }
+  .recent-box h4 {
+    font-size: 22px;
+  }
+  .recent-box strong {
+    font-size: 17px;
+  }
+}
+/* ================= 768px ================= */
+@media (max-width: 768px) {
+  .dashboard-bottom {
+    flex-direction: column;
+    gap: 25px;
+    margin: 40px 15px;
+  }
+  .recent-box {
+    width: 100%;
+    padding: 20px;
+  }
+  .recent-box h4 {
+    font-size: 21px;
+  }
+  .recent-box ul li {
+    padding: 18px 0;
+  }
+  .recent-box strong {
+    font-size: 16px;
+  }
+  .recent-box small {
+    font-size: 13px;
+  }
+}
+/* ================= 576px ================= */
+@media (max-width: 576px) {
+  .dashboard-bottom {
+    margin: 30px 20px;
+    gap: 20px;
+  }
+  .recent-box {
+    padding: 18px;
+    border-radius: 10px;
+  }
+  .recent-box h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .recent-box ul li {
+    padding: 16px 0;
+  }
+  .recent-box strong {
+    font-size: 15px;
+  }
+  .recent-box small {
+    font-size: 13px;
+  }
+}
+/* ================= 400px ================= */
+@media (max-width: 400px) {
+  .dashboard-bottom {
+    margin: 25px 15px;
+    gap: 18px;
+  }
+  .recent-box {
+    padding: 15px;
+  }
+  .recent-box h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .recent-box ul li {
+    padding: 14px 0;
+  }
+  .recent-box strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+    word-break: break-word;
+  }
+  .recent-box small {
+    display: block;
+    font-size: 12px;
+    word-break: break-word;
+  }
+}
